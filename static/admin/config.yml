@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+local_backend: true
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Сторінки"
+    files:
+      - file: "src/pages/index.md"
+        label: "Головна"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Hero Image, name: image, widget: image }
+          - { label: Hero Title, name: heading, widget: string }
+          - { label: Hero Description, name: subheading, widget: string }
+          - { label: About Image, name: aboutImage, widget: image }
+          - { label: About Title, name: title, widget: string }
+          - { label: About Body, name: body, widget: markdown }
+          - {
+              label: Partners,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  {
+                    label: Items,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Title, name: text, widget: string },
+                        { label: Url, name: url, widget: string },
+                        { label: Image, name: image, widget: image },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/donate/index.md"
+        label: "Підтримка"
+        name: "donate"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "donate-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - file: "src/pages/faq/index.md"
+        label: "Часті запитання"
+        name: "faq"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "faq-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Body, name: body, widget: markdown }
+  - name: "feature"
+    label: "Продукти"
+    folder: "src/pages/feature"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "feature-post",
+        }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Body, name: body, widget: markdown }
