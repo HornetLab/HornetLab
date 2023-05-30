@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="navbar-item">
               <div className="buttons has-addons is-centered">
                 <Link className="button is-warning" to="/donate">Підтримати</Link>
-                <a className="button is-info is-light" href="https://airtable.com/shrjr9gavatDWRilm" target="_blank" rel="noopener noreferrer">Подати заявку</a>
+                {/* <a className="button is-info is-light" href="https://airtable.com/shrjr9gavatDWRilm" target="_blank" rel="noopener noreferrer">Подати заявку</a> */}
               </div>
             </div>
             {/* <Link className="navbar-item" to="/">UA</Link>
