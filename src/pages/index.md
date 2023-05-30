@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
 path: /
-image: /img/hornetlab/about_1.jpg
+image: /img/hornetlab/about_2.jpg
 heading: HornetLab
-subheading: Дрони-камікадзе, дрони під скид та ретранслятори для фронту
+subheading: Дрони-камікадзе та ретранслятори
 aboutImage: /img/hornetlab/about_1.jpg
 intro:
   blurbs:

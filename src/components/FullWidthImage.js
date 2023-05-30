@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 // import PreviewCompatibleImage from "./PreviewCompatibleImage";
 // import mainlogo from "../img/dronarnia/dronarnia_logo_white.svg";
-import mainlogo from "../img/hornetlab/hornetlab_logo_grey.svg";
+import mainlogo from "../img/hornetlab/hornet-logo-white-transparet_1.png";
 
 export default function FullWidthImage(props) {
   const {
     img,
-    imgHeight = 700,
+    imgHeight = 800,
     imgPosition = "50% center",
     // logo,
     // logoHeight = 300,
@@ -79,7 +79,7 @@ export default function FullWidthImage(props) {
                 src={mainlogo}
                 alt="Дронарня"
                 style={{
-                  width: "100px",
+                  width: "150px",
                   boxShadow: "rgba(0, 0, 0, .5) 0.5rem 0px 0px, rgba(0, 0, 0, .5) -0.5rem 0px 0px",
                   backgroundColor: "rgba(0, 0, 0, .5)",
                   padding: "18px 10px",

@@ -1,10 +1,10 @@
-# dronarnia
+# HornetLab
 
 _Web development of HornetLab site_
 
 ### Deploy status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f3790f89-c5e9-4aeb-9a9f-62a0222b859c/deploy-status)](https://app.netlify.com/sites/dronarnia/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/37334a1c-fa1b-4580-8861-722d6c01115f/deploy-status)](https://app.netlify.com/sites/hornetlab/deploys)
 
 ### Run
 
