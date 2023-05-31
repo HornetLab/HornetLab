@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 
@@ -91,11 +91,14 @@ return (
       <div className="pt-6 pb-6">
         <div className="content has-text-centered">
           <p>
+          <Link to="/">
+
             <img
               src={mainlogo}
               alt="Дронарня"
               style={{ width: "40px" }}
             />
+            </Link>
           </p>
           <p>
             <small>

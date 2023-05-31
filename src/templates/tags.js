@@ -32,8 +32,8 @@ const TagRoute = (props) =>  {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: "6rem" }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
+                <p className="title is-size-5 is-bold-light">{tagHeader}</p>
+                <p className="">{postLinks}</p>
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>

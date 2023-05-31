@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 // import PreviewCompatibleImage from "./PreviewCompatibleImage";
 // import mainlogo from "../img/dronarnia/dronarnia_logo_white.svg";
-import mainlogo from "../img/hornetlab/hornet-logo-white-transparet_1.png";
+import mainlogo from "../img/hornetlab/hornetlab-logo-white-transparet_1.png";
 
 export default function FullWidthImage(props) {
   const {
     img,
-    imgHeight = 800,
+    imgHeight = 600,
     imgPosition = "50% center",
     // logo,
     // logoHeight = 300,
@@ -24,7 +24,7 @@ export default function FullWidthImage(props) {
         style={{
           display: "grid",
           alignItems: "center",
-          // backgroundColor: "#000",
+          backgroundColor: "#000",
         }}
       >
 
@@ -35,11 +35,9 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
               height: imgHeight,
               width: "100%",
             }}
-            // This is a presentational image, so the alt should be an empty string
             alt=""
           />
         ) : (
@@ -49,13 +47,10 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
-              // You can set a maximum height for the image, if you wish.
               maxHeight: imgHeight,
             }}
             layout="fullWidth"
-            // You can optionally force an aspect ratio for the generated image
             aspectratio={1 / 1}
-            // This is a presentational image, so the alt should be an empty string
             alt=""
             formats={["auto", "webp", "avif"]}
           />
@@ -64,20 +59,17 @@ export default function FullWidthImage(props) {
         {(heading || subheading) && (
           <div
             style={{
-              // By using the same grid area for both, they are stacked on top of each other
               gridArea: "1/1",
               position: "relative",
-              // This centers the other elements inside the hero component
               placeItems: "center",
               display: "grid",
             }}
           >
-            {/* Any content here will be centered in the component */}
 
-            <div className="content has-text-centered mb-6">
+            <div className="mb-6">
               <img
                 src={mainlogo}
-                alt="Дронарня"
+                alt="HornetLab"
                 style={{
                   width: "150px",
                   boxShadow: "rgba(0, 0, 0, .5) 0.5rem 0px 0px, rgba(0, 0, 0, .5) -0.5rem 0px 0px",
@@ -94,9 +86,7 @@ export default function FullWidthImage(props) {
                   boxShadow: "rgba(0, 0, 0, .5) 0.5rem 0px 0px, rgba(0, 0, 0, .5) -0.5rem 0px 0px",
                   backgroundColor: "rgba(0, 0, 0, .5)",
                   color: "#fff",
-                  // lineHeight: "1",
                   padding: "0.25em",
-                  // fontStyle: "italic",
                 }}
               >
                 {heading}
@@ -110,10 +100,7 @@ export default function FullWidthImage(props) {
                   boxShadow: "rgba(0, 0, 0, .5) 0.5rem 0px 0px, rgba(0, 0, 0, .5) -0.5rem 0px 0px",
                   backgroundColor: "rgba(0, 0, 0, .5)",
                   color: "#fff",
-                  // lineHeight: "1",
                   padding: "0.25rem",
-                  // marginTop: "0.5rem",
-                  // fontStyle: "italic",
                 }}
               >
                 {subheading}
@@ -121,6 +108,8 @@ export default function FullWidthImage(props) {
             )}
           </div>
         )}
+
+
       </div>
     </React.Fragment>
   );

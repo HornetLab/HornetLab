@@ -9,9 +9,9 @@ const FeatureRollTemplate = (props) => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
-    <div className="has-text-centered">
-      <div className="title is-size-1 is-size-3-touch mb-6">Наші вироби</div>
-      <div className="columns is-multiline">
+    <div className="">
+      <p className="is-size-5 is-size-6-touch mb-5">Наші вироби:</p>
+      <div className="columns is-multiline has-text-centered">
         {posts && posts.map(({ node: post }) => (
           <div className="column is-3" key={post.id}>
 

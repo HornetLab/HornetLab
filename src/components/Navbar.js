@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import PropTypes from 'prop-types'
+import { Link, graphql, StaticQuery } from "gatsby";
 
 import logo from "../img/hornetlab/hornetlab_logo_grey.svg";
 
-const Navbar = () => {
+const NavbarTemplate = (props) => {
   const [isActive, setIsActive] = useState(false);
+  const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
     <nav
@@ -29,10 +31,23 @@ const Navbar = () => {
           </button>
         </div>
         <div id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
-          {/* <div className="navbar-start">
-            <Link className="navbar-item" activeClassName="is-active" to="/">Головна</Link>
-            <Link className="navbar-item" activeClassName="is-active" to="/feature">Напрямки діяльності</Link>
-          </div> */}
+          <div className="navbar-start">
+            {/* <Link className="navbar-item" activeClassName="is-active" to="/">Головна</Link> */}
+            {/* <Link className="navbar-item" activeClassName="is-active" to="/feature">Напрямки діяльності</Link> */}
+
+            <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-link">Наші вироби</a>
+
+              <div className="navbar-dropdown">
+                {posts && posts.map(({ node: post }) => (
+                  <Link to={post.fields.slug} key={post.id} className="navbar-item" activeClassName="is-active">
+                    {post.frontmatter.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+          </div>
           <div className="navbar-end">
             {/* <Link className="navbar-item" activeClassName="is-active" to="/faq">Часті Запитання</Link>
             <Link className="navbar-item" activeClassName="is-active" to="/blog">Хроніки</Link>
@@ -53,4 +68,53 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+Navbar.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
+// export default Navbar;
+export default function Navbar() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query NavbarQuery {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "feature-post" } } }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 200)
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  description
+                  templateKey
+                  date(formatString: "MMMM DD, YYYY")
+                  featuredImage {
+                    childImageSharp {
+                      gatsbyImageData(
+                        width: 400
+                        quality: 100
+                        layout: CONSTRAINED
+                      )
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={(data, count) => <NavbarTemplate data={data} count={count} />}
+    />
+  );
+}

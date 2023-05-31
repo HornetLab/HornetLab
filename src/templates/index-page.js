@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import FeatureRoll from "../components/FeatureRoll";
 // import BlogRoll from "../components/BlogRoll";
-import Partners from "../components/Partners";
+// import Partners from "../components/Partners";
 import FullWidthImage from "../components/FullWidthImage";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -17,30 +18,18 @@ export const IndexPageTemplate = ({
   subheading,
   title,
   aboutImage,
-  intro,
+  // intro,
   content,
   contentComponent
 }) => {
   const heroImage = getImage(image) || image;
-  const fullImage = getImage(aboutImage) || aboutImage;
+  // const fullImage = getImage(aboutImage) || aboutImage;
   const PageContent = contentComponent || Content;
 
   return (
     <div>
 
       <FullWidthImage img={heroImage} heading={heading} subheading={subheading} />
-
-      <section className="section">
-        <div className="pt-6 pb-6">
-          <div className="container">
-              <div className="columns">
-                <div className="column is-12 is-10-fullhd is-offset-1-fullhd">
-                  <FeatureRoll />
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
 
       {/* <section className="section">
         <div className="container">
@@ -56,18 +45,40 @@ export const IndexPageTemplate = ({
 
       {/* <FullWidthImage img={fullImage} imgPosition={"50% center"} /> */}
 
-      {/* <section className="section">
+      <section className="section">
         <div className="pt-6 pb-6">
           <div className="container">
             <div className="columns">
               <div className="column is-12 is-8-fullhd is-offset-2-fullhd">
-                <h1 className="title is-size-1 is-size-3-touch has-text-centered is-uppercase mb-6">{title}</h1>
+                {/* <p><img src="../img/hornetlab/about_1_2.jpg" alt="HornetLab Logo" width="200" className="mb-6"/></p> */}
+                {/* <h1 className="title is-size-1 is-size-3-touch has-text-centered is-uppercase mb-6">{title}</h1> */}
                 <PageContent className="content is-size-5 is-size-6-touch" content={content} />
               </div>
             </div>
           </div>
         </div>
-      </section> */}
+
+
+        <div className="pt-6 pb-6 has-text-centered">
+          <Link className="button is-warning is-large is-responsive" to="/donate">Підтримати</Link>
+        </div>
+
+      {/* </section>
+
+      <section className="section"> */}
+        <div className="pt-6 pb-6">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-12 is-8-fullhd is-offset-2-fullhd">
+                <FeatureRoll />
+              </div>
+            </div>
+          </div>
+        </div>
+      {/* </section>
+
+      <section className="section"> */}
+      </section>
 
       {/* <section className="section" style={{backgroundColor: "#f3f1f1"}}>
         <div className="pt-6 pb-6">
@@ -88,10 +99,10 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-    heading: PropTypes.string,
-  }),
+  // intro: PropTypes.shape({
+  //   blurbs: PropTypes.array,
+  //   heading: PropTypes.string,
+  // }),
 };
 
 const IndexPage = ({ data }) => {
@@ -104,11 +115,11 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        aboutImage={frontmatter.aboutImage}
+        // aboutImage={frontmatter.aboutImage}
         title={frontmatter.title}
         content={post.html}
         contentComponent={HTMLContent}
-        intro={frontmatter.intro}
+        // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -136,23 +147,7 @@ export const indexPageQuery = graphql`
         }
         heading
         subheading
-        aboutImage {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
         title
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(height: 80, quality: 100, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-        }
       }
     }
   }
