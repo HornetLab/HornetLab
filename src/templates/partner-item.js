@@ -14,7 +14,7 @@ import Content, { HTMLContent } from "../components/Content";
 import FeatureRoll from "../components/FeatureRoll";
 
 // eslint-disable-next-line
-export const FeaturePostTemplate = ({
+export const PartnerItemTemplate = ({
   heroImage,
   heroTitle,
   heroSubtitle,
@@ -50,7 +50,7 @@ export const FeaturePostTemplate = ({
               {/* <div className="container content">
                 <div className="columns">
                   <div className="column is-6 is-6-fullhd">
-                    // <FullWidthImage img={postImage} imgPosition={"50% center"} />
+                    <FullWidthImage img={postImage} imgPosition={"50% center"} />
                   </div>
                   <div className="column is-6 is-6-fullhd">
                     <h1 className="title is-size-1 is-size-3-touch mb-6">{title}</h1>
@@ -62,7 +62,7 @@ export const FeaturePostTemplate = ({
               <h1 className="title is-size-1 is-size-3-touch mb-6">{title}</h1>
               <h3 className="mb-6">{description}</h3> */}
               {/* <div className="mb-6">
-                // <FullWidthImage img={postImage} imgPosition={"50% center"} />
+                <FullWidthImage img={postImage} imgPosition={"50% center"} />
               </div> */}
 
               <PostContent className="mb-6" content={content} />
@@ -93,7 +93,7 @@ export const FeaturePostTemplate = ({
   );
 };
 
-FeaturePostTemplate.propTypes = {
+PartnerItemTemplate.propTypes = {
   heroImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heroTitle: PropTypes.string,
   heroSubtitle: PropTypes.string,
@@ -105,12 +105,12 @@ FeaturePostTemplate.propTypes = {
   contentComponent: PropTypes.func,
 };
 
-const FeaturePost = ({ data }) => {
+const PartnerItem = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <FeaturePostTemplate
+      <PartnerItemTemplate
         heroImage={post.frontmatter.heroImage}
         heroTitle={post.frontmatter.heroTitle}
         heroSubtitle={post.frontmatter.heroSubtitle}
@@ -133,7 +133,7 @@ const FeaturePost = ({ data }) => {
   );
 };
 
-FeaturePost.propTypes = {
+PartnerItem.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       // frontmatter: PropTypes.object,
@@ -141,10 +141,10 @@ FeaturePost.propTypes = {
   }),
 };
 
-export default FeaturePost;
+export default PartnerItem;
 
-export const featurePostQuery = graphql`
-  query FeaturePostByID($id: String!) {
+export const PartnerItemQuery = graphql`
+  query PartnerItemByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 
 // import mainlogo from "../img/dronarnia/dronarnia_logo_white.svg";
-import mainlogo from "../img/hornetlab/hornetlab_logo_grey.svg";
+import mainlogo from "../img/hornetlab_logo_grey.svg";
 
 const Footer = () => {
 

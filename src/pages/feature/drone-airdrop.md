@@ -3,10 +3,10 @@ templateKey: feature-post
 title: Дрон під скид
 description: карбонова рама 8"
 date: 2022-02-24T15:04:10.000Z
-featuredImage: /img/hornetlab/product_1_1.jpeg
+featuredImage: /img/product_1_1.jpeg
 tags:
   - drone
-heroImage: /img/hornetlab/product_1_1.jpeg
+heroImage: /img/product_1_1.jpeg
 heroTitle: Дрон під скид
 heroSubtitle: карбонова рама 8"
 ---
@@ -31,4 +31,4 @@ heroSubtitle: карбонова рама 8"
 
 На данних дронах можна тренуватися літати у режимі Acro по FPV, та працювати у якості скидача та як камікадзе.
 
-![Дрон під скид 1](/img/hornetlab/product_1_1.jpeg)
+![Дрон під скид 1](/img/product_1_1.jpeg)

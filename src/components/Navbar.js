@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from "gatsby";
 
-import logo from "../img/hornetlab/hornetlab_logo_grey.svg";
+import logo from "../img/hornetlab_logo_grey.svg";
 
 const NavbarTemplate = (props) => {
   const [isActive, setIsActive] = useState(false);

@@ -7,7 +7,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import FeatureRoll from "../components/FeatureRoll";
 // import BlogRoll from "../components/BlogRoll";
-// import Partners from "../components/Partners";
+import PartnerList from "../components/PartnerList";
 import FullWidthImage from "../components/FullWidthImage";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
           <div className="container">
             <div className="columns">
               <div className="column is-12 is-8-fullhd is-offset-2-fullhd">
-                {/* <p><img src="../img/hornetlab/about_1_2.jpg" alt="HornetLab Logo" width="200" className="mb-6"/></p> */}
+                {/* <p><img src="../img/about_1_2.jpg" alt="HornetLab Logo" width="200" className="mb-6"/></p> */}
                 {/* <h1 className="title is-size-1 is-size-3-touch has-text-centered is-uppercase mb-6">{title}</h1> */}
                 <PageContent className="content is-size-5 is-size-6-touch" content={content} />
               </div>
@@ -75,6 +75,17 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
+
+        <div className="pt-6 pb-6">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-12 is-8-fullhd is-offset-2-fullhd">
+                <PartnerList />
+              </div>
+            </div>
+          </div>
+        </div>
+
       {/* </section>
 
       <section className="section"> */}

@@ -3,10 +3,10 @@ templateKey: feature-post
 title: Повітряний ретранслятор
 description: для Dji Mavic 3
 date: 2022-02-22T15:04:10.000Z
-featuredImage: /img/hornetlab/product_3_1.jpeg
+featuredImage: /img/product_3_1.jpeg
 tags:
   - repeater
-heroImage: /img/hornetlab/product_3_1.jpeg
+heroImage: /img/product_3_1.jpeg
 heroTitle: Повітряний ретранслятор
 heroSubtitle: для Dji Mavic 3
 ---
@@ -19,16 +19,16 @@ heroSubtitle: для Dji Mavic 3
 | ТТХ                             |                 |
 | ----:                           | :----           |
 | Протестована дистанція роботи   | 5.5 км          |
-| Пийом відео                     | 5,8 Ггц         |
+| Прийом відео                    | 5,8 Ггц         |
 | Передача відео до пілота        | 1,2 Ггц         |
-| Пийом та передача керування     | ELRS/Crossfire  |
+| Прийом та передача керування    | ELRS/Crossfire  |
 
 Ретранслятор дає можливість не втратити зв'язок з дроном на мінімальній висоті.
 
 Потребує додаткових навичок від пілотів та тренування.
 
-![Повітряний ретранслятор 1](/img/hornetlab/product_3_1.jpeg)
+![Повітряний ретранслятор 1](/img/product_3_1.jpeg)
 
-![Повітряний ретранслятор 2](/img/hornetlab/product_3_2.jpeg)
+![Повітряний ретранслятор 2](/img/product_3_2.jpeg)
 
-![Повітряний ретранслятор 3](/img/hornetlab/product_3_3.jpeg)
+![Повітряний ретранслятор 3](/img/product_3_3.jpeg)

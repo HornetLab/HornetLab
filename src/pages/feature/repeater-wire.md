@@ -3,10 +3,10 @@ templateKey: feature-post
 title: Дротовий ретранслятор
 description: наземна станція
 date: 2022-02-21T15:04:10.000Z
-featuredImage: /img/hornetlab/product_4_1.jpeg
+featuredImage: /img/product_4_1.jpeg
 tags:
   - repeater
-heroImage: /img/hornetlab/product_4_1.jpeg
+heroImage: /img/product_4_1.jpeg
 heroTitle: Дротовий ретранслятор
 heroSubtitle: наземна станція
 ---
@@ -25,4 +25,4 @@ heroSubtitle: наземна станція
 
 Також дає можливість встановити антени на висоту, що збільшить дальність роботи.
 
-![Дротовий ретранслятор 1](/img/hornetlab/product_4_1.jpeg)
+![Дротовий ретранслятор 1](/img/product_4_1.jpeg)

@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 path: /
-image: /img/hornetlab/about_2.jpg
+image: /img/about_2.jpg
 heading: HornetLab
 subheading: Дрони-камікадзе
 title: Про нас

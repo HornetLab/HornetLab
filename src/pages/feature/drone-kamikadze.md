@@ -3,10 +3,10 @@ templateKey: feature-post
 title: Дрон камікадзе
 description: алюмінієва рама 8"
 date: 2022-02-23T15:04:10.000Z
-featuredImage: /img/hornetlab/product_2_1.jpeg
+featuredImage: /img/product_2_1.jpeg
 tags:
   - drone
-heroImage: /img/hornetlab/product_2_1.jpeg
+heroImage: /img/product_2_1.jpeg
 heroTitle: Дрон камікадзе
 heroSubtitle: алюмінієва рама 8"
 ---
@@ -34,4 +34,4 @@ heroSubtitle: алюмінієва рама 8"
 
 Алюмінієві рами деформуються при приземленні та падіннях.
 
-![Дрон камікадзе 1](/img/hornetlab/product_2_1.jpeg)
+![Дрон камікадзе 1](/img/product_2_1.jpeg)
