@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 path: /
-heroImage: /img/about_2.jpg
+heroImage: /img/about_3.jpg
 heroTitle: HornetLab
 heroSubtitle: Дрони-камікадзе
 ---
