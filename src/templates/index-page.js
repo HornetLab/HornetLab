@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import FeatureRoll from "../components/FeatureRoll";
+import ProductList from "../components/ProductList";
 // import BlogRoll from "../components/BlogRoll";
 import PartnerList from "../components/PartnerList";
 import FullWidthImage from "../components/FullWidthImage";
@@ -13,23 +14,21 @@ import Content, { HTMLContent } from "../components/Content";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  heading,
-  subheading,
-  title,
-  aboutImage,
-  // intro,
+  heroImage,
+  heroTitle,
+  heroSubtitle,
+  helmet,
   content,
   contentComponent
 }) => {
-  const heroImage = getImage(image) || image;
-  // const fullImage = getImage(aboutImage) || aboutImage;
+  const herroImage = getImage(heroImage) || heroImage;
   const PageContent = contentComponent || Content;
 
   return (
     <div>
+      {helmet || ""}
 
-      <FullWidthImage img={heroImage} heading={heading} subheading={subheading} />
+      <FullWidthImage img={herroImage} heading={heroTitle} subheading={heroSubtitle} />
 
       {/* <section className="section">
         <div className="container">
@@ -70,7 +69,7 @@ export const IndexPageTemplate = ({
           <div className="container">
             <div className="columns">
               <div className="column is-12 is-8-fullhd is-offset-2-fullhd">
-                <FeatureRoll />
+                <ProductList />
               </div>
             </div>
           </div>
@@ -103,11 +102,12 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  aboutImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string.isRequired,
+  heroImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  heroTitle: PropTypes.string,
+  heroSubtitle: PropTypes.string,
+  // aboutImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  // title: PropTypes.string.isRequired,
+  helmet: PropTypes.object,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   // intro: PropTypes.shape({
@@ -123,14 +123,23 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        heroImage={frontmatter.heroImage}
+        heroTitle={frontmatter.heroTitle}
+        heroSubtitle={frontmatter.heroSubtitle}
         // aboutImage={frontmatter.aboutImage}
-        title={frontmatter.title}
+        // title={frontmatter.title}
         content={post.html}
         contentComponent={HTMLContent}
         // intro={frontmatter.intro}
+        helmet={
+          <Helmet titleTemplate="%s | Blog">
+            <title>{`${post.frontmatter.heroTitle}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.heroSubtitle}`}
+            />
+          </Helmet>
+        }
       />
     </Layout>
   );
@@ -151,14 +160,13 @@ export const indexPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
-        image {
+        heroImage {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
-        heading
-        subheading
-        title
+        heroTitle
+        heroSubtitle
       }
     }
   }

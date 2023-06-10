@@ -1,15 +1,13 @@
 ---
-templateKey: feature-post
-title: Дротовий ретранслятор
-description: наземна станція
+templateKey: product-item
 date: 2022-02-21T15:04:10.000Z
-featuredImage: /img/product_4_1.jpeg
 tags:
   - repeater
 heroImage: /img/product_4_1.jpeg
 heroTitle: Дротовий ретранслятор
 heroSubtitle: наземна станція
 ---
+
 # Дротовий ретранслятор, або наземна станція
 
 Ціна 20 000 грн (Ціна може змінюватись залежно від вхідної ціни на запчастини)

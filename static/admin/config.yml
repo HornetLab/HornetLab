@@ -26,33 +26,11 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Hero Image, name: image, widget: image }
-          - { label: Hero Title, name: heading, widget: string }
-          - { label: Hero Description, name: subheading, widget: string }
-          - { label: About Image, name: aboutImage, widget: image }
-          - { label: About Title, name: title, widget: string }
-          - { label: About Body, name: body, widget: markdown }
-          - {
-              label: Partners,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  {
-                    label: Items,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Title, name: text, widget: string },
-                        { label: Url, name: url, widget: string },
-                        { label: Image, name: image, widget: image },
-                      ],
-                  },
-                ],
-            }
-      - file: "src/pages/donate/index.md"
+          - { label: Hero Image, name: heroImage, widget: image }
+          - { label: Hero Title, name: heroTitle, widget: string }
+          - { label: Hero Subtitle, name: heroSubtitle, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - file: "src/pages/donate.md"
         label: "Підтримка"
         name: "donate"
         fields:
@@ -62,25 +40,13 @@ collections:
               widget: "hidden",
               default: "donate-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: Hero Image, name: heroImage, widget: image }
+          - { label: Hero Title, name: heroTitle, widget: string }
+          - { label: Hero Subtitle, name: heroSubtitle, widget: string }
           - { label: Body, name: body, widget: markdown }
-      - file: "src/pages/faq/index.md"
-        label: "Часті запитання"
-        name: "faq"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "faq-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: string }
-          - { label: Body, name: body, widget: markdown }
-  - name: "feature"
+  - name: "product"
     label: "Продукти"
-    folder: "src/pages/feature"
+    folder: "src/pages/product"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -88,10 +54,26 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "feature-post",
+          default: "product-item",
         }
       - { label: Publish Date, name: date, widget: datetime }
-      - { label: Featured Image, name: featuredImage, widget: image }
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string }
+      - { label: Hero Image, name: heroImage, widget: image }
+      - { label: Hero Title, name: heroTitle, widget: string }
+      - { label: Hero Subtitle, name: heroSubtitle, widget: string }
       - { label: Body, name: body, widget: markdown }
+  - name: "partner"
+    label: "Партнери"
+    folder: "src/pages/partner"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "partner-item",
+        }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Partner Image, name: partnerImage, widget: image }
+      - { label: Title, name: title, widget: string }
+      - { label: Partner Link, name: partnerLink, widget: string }

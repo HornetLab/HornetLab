@@ -19,7 +19,7 @@ const PartnerListTemplate = (props) => {
             <div>
               <div className="mb-3">
                 <a href={post.frontmatter.partnerLink} target="_blank" rel="noopener noreferrer" title={post.frontmatter.title}>
-                  <PreviewCompatibleImage imageInfo={post.frontmatter.featuredImage} />
+                  <PreviewCompatibleImage imageInfo={post.frontmatter.partnerImage} />
                 </a>
               </div>
               <div className="mb-4">
@@ -62,18 +62,16 @@ export default function PartnerList() {
                 }
                 frontmatter {
                   title
-                  description
                   partnerLink
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
-                  featuredImage {
+                  partnerImage {
                     childImageSharp {
                       gatsbyImageData(
                         width: 400
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }

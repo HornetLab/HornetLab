@@ -1,15 +1,13 @@
 ---
-templateKey: feature-post
-title: Дрон камікадзе
-description: алюмінієва рама 8"
+templateKey: product-item
 date: 2022-02-23T15:04:10.000Z
-featuredImage: /img/product_2_1.jpeg
 tags:
   - drone
 heroImage: /img/product_2_1.jpeg
 heroTitle: Дрон камікадзе
 heroSubtitle: алюмінієва рама 8"
 ---
+
 # Дрон камікадзе, на алюмінієвій рамі 8"
 
 Ціна 21 000 грн

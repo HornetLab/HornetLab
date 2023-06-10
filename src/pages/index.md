@@ -1,10 +1,9 @@
 ---
 templateKey: index-page
 path: /
-image: /img/about_2.jpg
-heading: HornetLab
-subheading: Дрони-камікадзе
-title: Про нас
+heroImage: /img/about_2.jpg
+heroTitle: HornetLab
+heroSubtitle: Дрони-камікадзе
 ---
 
 # Ми є HornetLab

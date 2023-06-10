@@ -1,15 +1,13 @@
 ---
-templateKey: feature-post
-title: Повітряний ретранслятор
-description: для Dji Mavic 3
+templateKey: product-item
 date: 2022-02-22T15:04:10.000Z
-featuredImage: /img/product_3_1.jpeg
 tags:
   - repeater
 heroImage: /img/product_3_1.jpeg
 heroTitle: Повітряний ретранслятор
 heroSubtitle: для Dji Mavic 3
 ---
+
 # Повітряний ретранслятор, для встановлення на Dji Mavic 3
 
 Ціна 23 000 грн

@@ -11,22 +11,20 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import FullWidthImage from "../components/FullWidthImage";
 import Content, { HTMLContent } from "../components/Content";
-import FeatureRoll from "../components/FeatureRoll";
+import FeatureRoll from "../components/ProductList";
 
 // eslint-disable-next-line
-export const FeaturePostTemplate = ({
+export const ProductItemTemplate = ({
   heroImage,
   heroTitle,
   heroSubtitle,
-  title,
-  description,
-  featuredImage,
+  // title,
+  // description,
   helmet,
   content,
   contentComponent,
 }) => {
   const herroImage = getImage(heroImage) || heroImage;
-  // const postImage = getImage(featuredImage) || featuredImage;
   const PostContent = contentComponent || Content;
 
   return (
@@ -93,24 +91,21 @@ export const FeaturePostTemplate = ({
   );
 };
 
-FeaturePostTemplate.propTypes = {
+ProductItemTemplate.propTypes = {
   heroImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heroTitle: PropTypes.string,
   heroSubtitle: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  featuredImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   helmet: PropTypes.object,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
 };
 
-const FeaturePost = ({ data }) => {
+const ProductItem = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <FeaturePostTemplate
+      <ProductItemTemplate
         heroImage={post.frontmatter.heroImage}
         heroTitle={post.frontmatter.heroTitle}
         heroSubtitle={post.frontmatter.heroSubtitle}
@@ -118,22 +113,19 @@ const FeaturePost = ({ data }) => {
         contentComponent={HTMLContent}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{`${post.frontmatter.heroTitle}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={`${post.frontmatter.heroSubtitle}`}
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        featuredImage={post.frontmatter.featuredImage}
       />
     </Layout>
   );
 };
 
-FeaturePost.propTypes = {
+ProductItem.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       // frontmatter: PropTypes.object,
@@ -141,10 +133,10 @@ FeaturePost.propTypes = {
   }),
 };
 
-export default FeaturePost;
+export default ProductItem;
 
-export const featurePostQuery = graphql`
-  query FeaturePostByID($id: String!) {
+export const ProductItemQuery = graphql`
+  query ProductItemByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -157,9 +149,7 @@ export const featurePostQuery = graphql`
         }
         heroTitle
         heroSubtitle
-        title
-        description
-        featuredImage {
+        heroImage {
           childImageSharp {
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
@@ -11,7 +12,7 @@ export const DonatePageTemplate = ({
   heroImage,
   heroTitle,
   heroSubtitle,
-  title,
+  helmet,
   content,
   contentComponent
 }) => {
@@ -20,6 +21,8 @@ export const DonatePageTemplate = ({
 
   return (
     <div>
+      {helmet || ""}
+
       <FullWidthImage img={herroImage} heading={heroTitle} subheading={heroSubtitle} />
 
       <section className="section">
@@ -42,7 +45,8 @@ DonatePageTemplate.propTypes = {
   heroImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heroTitle: PropTypes.string,
   heroSubtitle: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
+  helmet: PropTypes.object,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
@@ -58,8 +62,17 @@ const DonatePage = ({ data }) => {
         heroTitle={post.frontmatter.heroTitle}
         heroSubtitle={post.frontmatter.heroSubtitle}
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        // title={post.frontmatter.title}
         content={post.html}
+        helmet={
+          <Helmet titleTemplate="%s | Blog">
+            <title>{`${post.frontmatter.heroTitle}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.heroSubtitle}`}
+            />
+          </Helmet>
+        }
       />
     </Layout>
   );
@@ -91,7 +104,6 @@ export const donatePageQuery = graphql`
         }
         heroTitle
         heroSubtitle
-        title
       }
     }
   }

@@ -36,12 +36,12 @@ const NavbarTemplate = (props) => {
             {/* <Link className="navbar-item" activeClassName="is-active" to="/feature">Напрямки діяльності</Link> */}
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">Наші вироби</a>
+              <span className="navbar-link">Наші вироби</span>
 
               <div className="navbar-dropdown">
                 {posts && posts.map(({ node: post }) => (
                   <Link to={post.fields.slug} key={post.id} className="navbar-item" activeClassName="is-active">
-                    {post.frontmatter.title}
+                    {post.frontmatter.heroTitle}
                   </Link>
                 ))}
               </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
         query NavbarQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "feature-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "product-item" } } }
           ) {
             edges {
               node {
@@ -94,18 +94,17 @@ export default function Navbar() {
                   slug
                 }
                 frontmatter {
-                  title
-                  description
+                  heroTitle
+                  heroSubtitle
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
-                  featuredImage {
+                  heroImage {
                     childImageSharp {
                       gatsbyImageData(
                         width: 400
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }

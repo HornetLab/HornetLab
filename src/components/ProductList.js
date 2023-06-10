@@ -4,7 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
-const FeatureRollTemplate = (props) => {
+const ProductListTemplate = (props) => {
 
   const { edges: posts } = props.data.allMarkdownRemark;
 
@@ -18,12 +18,12 @@ const FeatureRollTemplate = (props) => {
             <div>
               <div className="mb-3">
                 <Link to={post.fields.slug}>
-                  <PreviewCompatibleImage imageInfo={post.frontmatter.featuredImage} />
+                  <PreviewCompatibleImage imageInfo={post.frontmatter.heroImage} />
                 </Link>
               </div>
               <div className="mb-4">
-                <div className="mb-2 is-size-5">{post.frontmatter.title}</div>
-                <div className="heading mb-0">{post.frontmatter.description}</div>
+                <div className="mb-2 is-size-5">{post.frontmatter.heroTitle}</div>
+                <div className="heading mb-0">{post.frontmatter.heroSubtitle}</div>
               </div>
               {/* <div className="buttons has-addons is-centered">
                 <a className="button is-warning" href="https://send.monobank.ua/jar/7iVoXMJPBE" target="_blank" rel="noopener noreferrer">Підтримати</a>
@@ -59,7 +59,7 @@ const FeatureRollTemplate = (props) => {
   )
 }
 
-FeatureRoll.propTypes = {
+ProductList.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -68,14 +68,14 @@ FeatureRoll.propTypes = {
 }
 
 
-export default function FeatureRoll() {
+export default function ProductList() {
   return (
     <StaticQuery
       query={graphql`
-        query FeatureRollQuery {
+        query ProductListQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "feature-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "product-item" } } }
           ) {
             edges {
               node {
@@ -85,11 +85,11 @@ export default function FeatureRoll() {
                   slug
                 }
                 frontmatter {
-                  title
-                  description
+                  heroTitle
+                  heroSubtitle
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
-                  featuredImage {
+                  heroImage {
                     childImageSharp {
                       gatsbyImageData(
                         width: 400
@@ -105,7 +105,7 @@ export default function FeatureRoll() {
           }
         }
       `}
-      render={(data, count) => <FeatureRollTemplate data={data} count={count} />}
+      render={(data, count) => <ProductListTemplate data={data} count={count} />}
     />
   );
 }

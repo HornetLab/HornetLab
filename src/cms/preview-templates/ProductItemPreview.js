@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { IndexPageTemplate } from '../../templates/index-page'
+import { ProductItemTemplate } from '../../templates/product-item'
 
-const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
+const ProductItemPreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <IndexPageTemplate
+      <ProductItemTemplate
         heroImage={getAsset(data.heroImage)}
         heroTitle={data.heroTitle}
         heroSubtitle={data.heroSubtitle}
@@ -19,7 +19,7 @@ const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
   }
 }
 
-IndexPagePreview.propTypes = {
+ProductItemPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
@@ -27,4 +27,4 @@ IndexPagePreview.propTypes = {
   widgetFor: PropTypes.func,
 }
 
-export default IndexPagePreview
+export default ProductItemPreview

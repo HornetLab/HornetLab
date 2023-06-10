@@ -2,16 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { DonatePageTemplate } from '../../templates/donate-page'
 
-const DonatePagePreview = ({ entry, widgetFor }) => {
+const DonatePagePreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
       <DonatePageTemplate
-        title={data.title}
-        // title={entry.getIn(['data', 'title'])}
-        description={data.description}
-        // description={entry.getIn(['data', 'description'])}
+        heroImage={getAsset(data.heroImage)}
+        heroTitle={data.heroTitle}
+        heroSubtitle={data.heroSubtitle}
         content={widgetFor('body')}
       />
     )
@@ -24,6 +23,7 @@ DonatePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
+  getAsset: PropTypes.func,
   widgetFor: PropTypes.func,
 }
 

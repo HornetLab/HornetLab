@@ -1,9 +1,6 @@
 ---
-templateKey: feature-post
-title: Дрон під скид
-description: карбонова рама 8"
+templateKey: product-item
 date: 2022-02-24T15:04:10.000Z
-featuredImage: /img/product_1_1.jpeg
 tags:
   - drone
 heroImage: /img/product_1_1.jpeg

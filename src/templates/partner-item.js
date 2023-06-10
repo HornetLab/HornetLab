@@ -11,22 +11,18 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import FullWidthImage from "../components/FullWidthImage";
 import Content, { HTMLContent } from "../components/Content";
-import FeatureRoll from "../components/FeatureRoll";
+import FeatureRoll from "../components/ProductList";
 
 // eslint-disable-next-line
 export const PartnerItemTemplate = ({
   heroImage,
   heroTitle,
   heroSubtitle,
-  title,
-  description,
-  featuredImage,
   helmet,
   content,
   contentComponent,
 }) => {
   const herroImage = getImage(heroImage) || heroImage;
-  // const postImage = getImage(featuredImage) || featuredImage;
   const PostContent = contentComponent || Content;
 
   return (
@@ -97,9 +93,6 @@ PartnerItemTemplate.propTypes = {
   heroImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heroTitle: PropTypes.string,
   heroSubtitle: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  featuredImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   helmet: PropTypes.object,
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
@@ -125,9 +118,6 @@ const PartnerItem = ({ data }) => {
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        featuredImage={post.frontmatter.featuredImage}
       />
     </Layout>
   );
@@ -157,13 +147,6 @@ export const PartnerItemQuery = graphql`
         }
         heroTitle
         heroSubtitle
-        title
-        description
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
       }
     }
   }
