@@ -12,4 +12,4 @@ heroSubtitle: HornetLab
 
 <a href="https://send.monobank.ua/jar/9mVARzpAWu" target="_blank" rel="noopener noreferrer">send.monobank.ua/jar/9mVARzpAWu</a>
 
-![HornetLab Logo](//img/about_1_2.jpg)
+![HornetLab Logo](/img/about_1_2.jpg)
