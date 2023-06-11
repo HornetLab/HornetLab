@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-22T15:04:10.000Z
 tags:
   - repeater
-heroImage: /img/product_3_1.jpeg
+heroImage: /img/ad-011.jpg
 heroTitle: Бездротовий ретранслятор
 heroSubtitle: для Dji Mavic
 ---
@@ -24,8 +24,8 @@ heroSubtitle: для Dji Mavic
 
 Потребує додаткових навичок від пілотів та тренування.
 
-![Повітряний ретранслятор 1](/img/product_3_1.jpeg)
+![Бездротовий ретранслятор 1](/img/ad-014.jpg)
 
-![Повітряний ретранслятор 2](/img/product_3_2.jpeg)
+![Повітряний ретранслятор 2](/img/product_3_1.jpeg)
 
-![Повітряний ретранслятор 3](/img/product_3_3.jpeg)
+![]()
