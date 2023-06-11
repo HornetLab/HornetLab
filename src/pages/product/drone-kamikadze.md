@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-23T15:04:10.000Z
 tags:
   - drone
-heroImage: /img/product_2_1.jpeg
+heroImage: /img/ad-129-1-.jpg
 heroTitle: Дрон камікадзе
 heroSubtitle: алюмінієва рама 8"
 ---
@@ -31,4 +31,6 @@ heroSubtitle: алюмінієва рама 8"
 
 Алюмінієві рами деформуються при приземленні та падіннях.
 
-![Дрон камікадзе 1](/img/ad-129-1-.jpg)
+![Дрон камікадзе 1](/img/ad-001-1-.jpg)
+
+![](/img/product_2_1.jpeg)
