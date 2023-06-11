@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 path: /
-heroImage: /img/screenshot-2023-06-06-at-21.25.03.png
+heroImage: /img/ad-097.jpg
 heroTitle: HornetLab
 heroSubtitle: Дрони для потреб ЗСУ
 ---
