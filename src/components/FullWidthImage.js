@@ -66,7 +66,7 @@ export default function FullWidthImage(props) {
             }}
           >
 
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <img
                 src={mainlogo}
                 alt="HornetLab"
@@ -77,9 +77,9 @@ export default function FullWidthImage(props) {
                   padding: "18px 10px",
                 }}
               />
-            </div>
+            </div> */}
 
-            {heading && (
+            {/* {heading && (
               <div
                 className="title is-size-1 is-size-3-touch has-text-centered"
                 style={{
@@ -91,9 +91,9 @@ export default function FullWidthImage(props) {
               >
                 {heading}
               </div>
-            )}
+            )} */}
 
-            {subheading && (
+            {/* {subheading && (
               <div
                 className="subtitle is-size-3 is-size-5-touch has-text-centered"
                 style={{
@@ -105,7 +105,7 @@ export default function FullWidthImage(props) {
               >
                 {subheading}
               </div>
-            )}
+            )} */}
           </div>
         )}
 

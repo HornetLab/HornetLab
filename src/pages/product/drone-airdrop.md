@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-24T15:04:10.000Z
 tags:
   - drone
-heroImage: /img/product_1_1.jpeg
+heroImage: /img/product_1_1_1.jpg
 heroTitle: Дрон з системою скидання.
 heroSubtitle: Карбонова рама 8"
 ---
@@ -27,4 +27,4 @@ heroSubtitle: Карбонова рама 8"
 
 Ціна може змінюватись залежно від вхідної ціни на запчастини
 
-![Дрон під скид 1](/img/product_1_1.jpeg)
+![Дрон під скид 1](/img/product_1_1_1.jpg)
