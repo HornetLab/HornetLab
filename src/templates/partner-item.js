@@ -110,7 +110,7 @@ const PartnerItem = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | HornetLab">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"

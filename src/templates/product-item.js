@@ -112,7 +112,7 @@ const ProductItem = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | HornetLab">
             <title>{`${post.frontmatter.heroTitle}`}</title>
             <meta
               name="description"

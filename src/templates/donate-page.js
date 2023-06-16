@@ -65,7 +65,7 @@ const DonatePage = ({ data }) => {
         // title={post.frontmatter.title}
         content={post.html}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | HornetLab">
             <title>{`${post.frontmatter.heroTitle}`}</title>
             <meta
               name="description"
