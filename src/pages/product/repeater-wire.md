@@ -5,9 +5,9 @@ tags:
   - repeater
 heroImage: /img/ad-116.jpg
 heroTitle: Наземна станція
-heroSubtitle: Наземна станція
+heroSubtitle: (Виносна антена)
 ---
-# Виносна антена.
+
 
 | ТТХ                       |                 |
 | ------------------------- | --------------- |
