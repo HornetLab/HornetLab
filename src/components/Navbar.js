@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from "gatsby";
 
-import logo from "../img/hornetlab_logo_grey.svg";
+import logo from "../img/hornetlab_logo2.svg";
+import mainlogo from "../img/hornetlab-logo-black-transparet_1.png";
 
 const NavbarTemplate = (props) => {
   const [isActive, setIsActive] = useState(false);
@@ -16,7 +17,7 @@ const NavbarTemplate = (props) => {
     >
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" activeClassName="is-active" title="Logo" style={{ paddingTop: "0", paddingBottom: "0" }}>
-            <img src={logo} alt="Dronarnia" style={{ height: "120px", width: "auto", marginRight: ".75rem", padding: "0" }} />
+            <img src={mainlogo} alt="Dronarnia" style={{ height: "120px", width: "auto", marginRight: ".75rem", padding: "0" }} />
             <span>HornetLab</span>
           </Link>
           {/* Hamburger menu */}
@@ -55,7 +56,7 @@ const NavbarTemplate = (props) => {
             <div className="navbar-item">
               <div className="buttons has-addons is-centered">
                 <Link className="button is-warning" to="/donate">Підтримати</Link>
-                {/* <a className="button is-info is-light" href="https://airtable.com/shrjr9gavatDWRilm" target="_blank" rel="noopener noreferrer">Подати заявку</a> */}
+                <a className="button is-info is-light" href="https://forms.gle/sZ31PRws7rSidZ8G8" target="_blank" rel="noopener noreferrer">Подати заявку</a>
               </div>
             </div>
             {/* <Link className="navbar-item" to="/">UA</Link>
