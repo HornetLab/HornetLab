@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from "gatsby";
 
-import logo from "../img/hornetlab_logo2.svg";
-import mainlogo from "../img/hornetlab-logo-black-transparet_1.png";
+import logo from "../img/hornetlab_logo_v2.svg";
+import mainlogo from "../img/hornetlub_logo_v1.png";
 
 const NavbarTemplate = (props) => {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +18,7 @@ const NavbarTemplate = (props) => {
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" activeClassName="is-active" title="Logo" style={{ paddingTop: "0", paddingBottom: "0" }}>
             <img src={mainlogo} alt="Dronarnia" style={{ height: "120px", width: "auto", marginRight: ".75rem", padding: "0" }} />
-            <span>HornetLab</span>
+            <span><b>HornetLab</b></span>
           </Link>
           {/* Hamburger menu */}
           <button
