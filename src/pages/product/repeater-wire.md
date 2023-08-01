@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-21T15:04:10.000Z
 tags:
   - repeater
-heroImage: /img/ad-116.jpg
+heroImage: /img/photo_2023-07-31-17.16.35.jpeg
 heroTitle: Наземна станція
 heroSubtitle: виносна антена
 ---
@@ -23,4 +23,4 @@ heroSubtitle: виносна антена
 Орієнтовна вартість 20 000 грн.\
 (Ціна може змінюватись залежно від вхідної ціни на запчастини)
 
-![Дротовий ретранслятор 1](/img/ad-002.jpg)
+![Дротовий ретранслятор 1](/img/photo_2023-07-31-17.16.31.jpeg)
