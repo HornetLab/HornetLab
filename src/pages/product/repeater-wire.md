@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-21T15:04:10.000Z
 tags:
   - repeater
-heroImage: /img/photo_2023-07-31-17.16.35.jpeg
+heroImage: /img/screenshot-2023-08-02-at-20.27.04.png
 heroTitle: Наземна станція
 heroSubtitle: виносна антена
 ---
