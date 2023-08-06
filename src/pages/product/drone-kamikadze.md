@@ -7,7 +7,7 @@ heroImage: /img/ad-129-1-.jpg
 heroTitle: Дрон камікадзе
 heroSubtitle: алюмінієва рама 8"
 ---
-![](/img/whatsapp-image-2023-08-06-at-14.34.33.jpeg)
+![]()
 
 # Дрон камікадзе, на алюмінієвій рамі 8"
 
