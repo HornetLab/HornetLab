@@ -66,9 +66,9 @@ export const ProductItemTemplate = ({
               <PostContent className="mb-6" content={content} />
 
               {/* <section className="section"> */}
-                <div className="pt-6 pb-6 has-text-centered">
+                {/* <div className="pt-6 pb-6 has-text-centered">
                   <Link className="button is-warning is-large is-responsive" to="/donate">Підтримати</Link>
-                </div>
+                </div> */}
               {/* </section> */}
 
               {/* <section className="section"> */}

@@ -58,9 +58,9 @@ export const IndexPageTemplate = ({
         </div>
 
 
-        <div className="pt-6 pb-6 has-text-centered">
+        {/* <div className="pt-6 pb-6 has-text-centered">
           <Link className="button is-warning is-large is-responsive" to="/donate">Підтримати</Link>
-        </div>
+        </div> */}
 
       {/* </section>
 
