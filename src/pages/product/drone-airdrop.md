@@ -5,7 +5,7 @@ tags:
   - drone
 heroImage: /img/product_1_1_1.jpg
 heroTitle: Дрон з системою скидання
-heroSubtitle: Карбонова рама
+heroSubtitle: Карбон 7"
 ---
 # FPV дрон з системою скидання, карбонова рама 7"
 
