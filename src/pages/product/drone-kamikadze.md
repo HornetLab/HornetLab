@@ -5,7 +5,7 @@ tags:
   - drone
 heroImage: /img/ad-129-1-.jpg
 heroTitle: Дрон камікадзе
-heroSubtitle: 'рама 8" '
+heroSubtitle: карбон
 ---
 # Дрон камікадзе
 
