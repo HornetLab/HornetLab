@@ -7,11 +7,11 @@ heroImage: /img/ad-129-1-.jpg
 heroTitle: Дрон камікадзе
 heroSubtitle: 'рама 8" '
 ---
-![](/img/img_2130.jpg)
+![]()
 
-![](/img/img_2131.jpg)
+![]()
 
-![](/img/img_2134.jpg)
+![]()
 
 ![]()
 
