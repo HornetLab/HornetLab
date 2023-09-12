@@ -41,4 +41,4 @@ heroSubtitle: 'рама 8" '
 
 ![](/img/product_2_1.jpeg)
 
-![](/img/img_2133.jpg)
+![](/img/img_2140.jpg)
