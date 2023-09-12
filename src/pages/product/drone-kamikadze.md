@@ -40,3 +40,5 @@ heroSubtitle: 'рама 8" '
 ![Дрон камікадзе 1](/img/ad-001-1-.jpg)
 
 ![](/img/product_2_1.jpeg)
+
+![](/img/img_2133.jpg)
