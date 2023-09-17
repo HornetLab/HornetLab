@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-24T15:04:10.000Z
 tags:
   - drone
-heroImage: /img/product_1_1_1.jpg
+heroImage: /img/screenshot-2023-09-17-at-19.12.44.png
 heroTitle: Дрон з системою скидання
 heroSubtitle: Карбон 7"
 ---
