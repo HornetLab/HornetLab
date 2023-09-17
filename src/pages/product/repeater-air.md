@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-22T15:04:10.000Z
 tags:
   - repeater
-heroImage: /img/img_7842.jpg
+heroImage: /img/screenshot-2023-09-17-at-19.06.12.png
 heroTitle: Бездротовий ретранслятор
 heroSubtitle: Працює виключно з DJI Mavic 3
 ---
