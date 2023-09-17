@@ -3,7 +3,7 @@ templateKey: product-item
 date: 2022-02-22T15:04:10.000Z
 tags:
   - repeater
-heroImage: /img/ad-011.jpg
+heroImage: /img/img_7842.jpg
 heroTitle: Бездротовий ретранслятор
 heroSubtitle: Працює виключно з DJI Mavic 3
 ---
@@ -25,8 +25,11 @@ heroSubtitle: Працює виключно з DJI Mavic 3
 
 Ціна може змінюватись залежно від вхідної ціни на запчастини
 
-![Бездротовий ретранслятор 1](/img/ad-014.jpg)
+1. ![Бездротовий ретранслятор 1](/img/img_7841.jpg)
+
 
 ![Повітряний ретранслятор 2](/img/img_7842.jpg)
 
-![]()
+![](/img/img_7843.jpg)
+
+![](/img/img_7845.jpg)
