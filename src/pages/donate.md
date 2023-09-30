@@ -5,11 +5,9 @@ heroImage: /img/about_1.jpg
 heroTitle: Контакти
 heroSubtitle: HornetLab
 ---
+Якщо у вас з'явились питання, ви можете зв'язатись з нами через Whatsapp або Signal за номером +380 63 782 4948.
 
-Ми постійно потребуємо матеріальної і технічної допомоги для розвитку
 
-## БАНКА МОНО
 
-<a href="https://send.monobank.ua/jar/9mVARzpAWu" target="_blank" rel="noopener noreferrer">send.monobank.ua/jar/9mVARzpAWu</a>
 
 ![HornetLab Logo](/img/hornetlub_logo_v1.jpg)
