@@ -2,7 +2,7 @@
 templateKey: donate-page
 path: /donate
 heroImage: /img/about_1.jpg
-heroTitle: Підтримка
+heroTitle: Контакти
 heroSubtitle: HornetLab
 ---
 
