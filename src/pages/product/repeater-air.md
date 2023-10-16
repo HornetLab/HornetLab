@@ -5,7 +5,7 @@ tags:
   - repeater
 heroImage: /img/screenshot-2023-09-17-at-19.06.12.png
 heroTitle: Бездротовий ретранслятор
-heroSubtitle: Працює виключно з DJI Mavic 3
+heroSubtitle: Працює з DJI Mavic 3
 ---
 # Бездротовий ретранслятор, для встановлення на Dji Mavic3
 
