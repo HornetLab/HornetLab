@@ -5,7 +5,7 @@ heroImage: /img/about_1.jpg
 heroTitle: Контакти
 heroSubtitle: HornetLab
 ---
-Монобанка для підтримки HornetLab https://send.monobank.ua/jar/9mVARzpAWu.
+тел: +380 63 782 4948 (Whatsapp, Signal) 
 
 
 ![HornetLab Logo](/img/hornetlub_logo_v1.jpg)
