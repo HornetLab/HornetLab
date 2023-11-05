@@ -37,7 +37,7 @@ return (
               <div className="menu-list">
                 <div>
                   <Link className="navbar-item" to="/products">
-                    Підтримати
+                    Контакти
                   </Link>
                 </div>
                 <div>

@@ -26,7 +26,7 @@ const ProductListTemplate = (props) => {
                 <div className="heading mb-0">{post.frontmatter.heroSubtitle}</div>
               </div>
               {/* <div className="buttons has-addons is-centered">
-                <a className="button is-warning" href="https://send.monobank.ua/jar/7iVoXMJPBE" target="_blank" rel="noopener noreferrer">Підтримати</a>
+                <a className="button is-warning" href="https://send.monobank.ua/jar/7iVoXMJPBE" target="_blank" rel="noopener noreferrer">Контакти</a>
                 <Link className="button is-info is-light" to={post.fields.slug}>Переглянути</Link>
               </div> */}
             </div>

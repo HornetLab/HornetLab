@@ -55,7 +55,7 @@ const NavbarTemplate = (props) => {
             <Link className="navbar-item" activeClassName="is-active" to="/products">Ветеранка</Link> */}
             <div className="navbar-item">
               <div className="buttons has-addons is-centered">
-                <Link className="button is-warning" to="/donate">Підтримати</Link>
+                <Link className="button is-warning" to="/donate">Контакти</Link>
                 <a className="button is-info is-light" href="https://forms.gle/sZ31PRws7rSidZ8G8" target="_blank" rel="noopener noreferrer">Подати заявку</a>
               </div>
             </div>

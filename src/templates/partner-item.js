@@ -65,7 +65,7 @@ export const PartnerItemTemplate = ({
 
               {/* <section className="section"> */}
                 <div className="pt-6 pb-6 has-text-centered">
-                  <Link className="button is-warning is-large is-responsive" to="/donate">Підтримати</Link>
+                  <Link className="button is-warning is-large is-responsive" to="/donate">Контакти</Link>
                 </div>
               {/* </section> */}
 
