@@ -56,7 +56,7 @@ const NavbarTemplate = (props) => {
             <div className="navbar-item">
               <div className="buttons has-addons is-centered">
                 <Link className="button is-warning" to="/donate">Контакти</Link>
-                <a className="button is-info is-light" href="https://forms.gle/sZ31PRws7rSidZ8G8" target="_blank" rel="noopener noreferrer">Подати заявку</a>
+                <a className="button is-info is-light" href="https://forms.gle/aZuQwuSvD4iimkzB6" target="_blank" rel="noopener noreferrer">Подати заявку</a>
               </div>
             </div>
             {/* <Link className="navbar-item" to="/">UA</Link>
