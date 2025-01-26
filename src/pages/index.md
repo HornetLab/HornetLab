@@ -2,8 +2,9 @@
 templateKey: index-page
 path: /
 heroImage: /img/photo_2023-01-19_21-18-19.jpg
-heroTitle: HornetLab
-heroSubtitle: Дрони для потреб ЗСУ
+heroTitle: HornetLab - Українські дрони та електроніка для потреб ЗСУ
+heroSubtitle: Кастомні дрони для потреб ЗСУ, ретранслятори, наземні станції.
+  Ручна збірка, тестування, якість.
 ---
 # Ми є HornetLab
 
