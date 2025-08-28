@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
+// import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
+import { faBug } from '@fortawesome/free-solid-svg-icons'
 
 // import mainlogo from "../img/dronarnia/dronarnia_logo_white.svg";
 import mainlogo from "../img/hornetlub_logo_v1.png";
@@ -102,8 +103,12 @@ return (
           </p>
           <p>
             <small>
-              HornetLab © 2023<br/>
-              Кохайтеся, чорнобриві, та не з москалями! <FontAwesomeIcon icon={faSkullCrossbones} size="1x" />
+              {/* Кохайтеся, чорнобриві, та не з москалями! <FontAwesomeIcon icon={faSkullCrossbones} size="1x" /> */}
+              Кохайтеся, чорнобриві, ... 
+              <br/>
+              Хрущі над вишнями гудуть <FontAwesomeIcon icon={faBug} size="1x" />
+              <br/>
+              HornetLab © 2023 - { new Date().getFullYear() }
           </small>
           </p>
         </div>
