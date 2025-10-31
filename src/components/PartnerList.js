@@ -50,7 +50,7 @@ export default function PartnerList() {
       query={graphql`
         query PartnerListQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: {frontmatter: {date: DESC}}
             filter: { frontmatter: { templateKey: { eq: "partner-item" } } }
           ) {
             edges {

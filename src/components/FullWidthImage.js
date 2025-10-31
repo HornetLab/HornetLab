@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 // import PreviewCompatibleImage from "./PreviewCompatibleImage";
 // import mainlogo from "../img/dronarnia/dronarnia_logo_white.svg";
-import mainlogo from "../img/hornetlab-logo-white-transparet_1.png";
+// import mainlogo from "../img/hornetlab-logo-white-transparet_1.png";
 
 export default function FullWidthImage(props) {
   const {

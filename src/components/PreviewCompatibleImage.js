@@ -5,6 +5,11 @@ import { GatsbyImage } from "gatsby-plugin-image";
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: "5px" };
 
+  // Якщо imageInfo відсутнє, повертаємо null
+  // if (!imageInfo) {
+  //   return null;
+  // }
+
   const {
     alt = "",
     childImageSharp,

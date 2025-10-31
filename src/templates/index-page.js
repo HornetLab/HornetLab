@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+// import { graphql, Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import ProductList from "../components/ProductList";
 // import BlogRoll from "../components/BlogRoll";
-import PartnerList from "../components/PartnerList";
+// import PartnerList from "../components/PartnerList";
 import FullWidthImage from "../components/FullWidthImage";
 import Content, { HTMLContent } from "../components/Content";
 

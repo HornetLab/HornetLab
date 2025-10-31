@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from "gatsby";
 
-import logo from "../img/hornetlab_logo_v2.svg";
+// import logo from "../img/hornetlab_logo_v2.svg";
 import mainlogo from "../img/hornetlub_logo_v1.png";
 
 const NavbarTemplate = (props) => {
@@ -26,9 +26,10 @@ const NavbarTemplate = (props) => {
             aria-expanded={isActive}
             onClick={() => setIsActive(!isActive)}
           >
-            <span />
-            <span />
-            <span />
+            <span/>
+            <span/>
+            <span/>
+            {/* &nbsp; */}
           </button>
         </div>
         <div id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
@@ -84,7 +85,7 @@ export default function Navbar() {
       query={graphql`
         query NavbarQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: {frontmatter: {date: DESC}}
             filter: { frontmatter: { templateKey: { eq: "product-item" } } }
           ) {
             edges {

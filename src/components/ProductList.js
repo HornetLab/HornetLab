@@ -74,7 +74,7 @@ export default function ProductList() {
       query={graphql`
         query ProductListQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: {frontmatter: {date: DESC}}
             filter: { frontmatter: { templateKey: { eq: "product-item" } } }
           ) {
             edges {

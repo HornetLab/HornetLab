@@ -8,8 +8,12 @@ _Web development of HornetLab site_
 
 ### Run
 
-`npm i`
+```
+nvm use 18.19.1
 
-`npm run develop`
+npm i --legacy-peer-deps
+
+npm run develop
+```
 
 #### Have fun! :)
